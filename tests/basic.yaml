@@ -1,0 +1,47 @@
+Name: Character Controls
+Default keys:
+  jump: spacebar
+  crouch: lshift
+  forward: w
+  backward: s
+  left: a
+  right: d
+  turn right: rarrow
+  turn left: larrow
+  look up: uarrow
+  look down: darrow
+
+hello: world
+
+States:
+  standing:
+    movement controls speed: 3
+    gravity: 0 -9.8 0
+    on:
+      condition: (is-key-down jump)
+      action: (impulse 0 10 0), (state jumping)
+    on:
+      condition: (is-key-down crouch)
+      action: (state crouch)
+  crouch:
+    eye_position multiplier: 0.9
+    fov multiplier: 0.9
+    on:
+      condition: (is-key-up crouch)
+      action: (state standing)
+  jumping:
+    movement controls speed: 0
+    on:
+      condition: (touching-ground)
+      action: (state standing)
+    on:
+      condition: (is-key-down crouch)
+      action: (state glide)
+  glide:
+    gravity: 0 -1.0 0
+    on:
+      condition: (is-key-up crouch)
+      action: (state jumping)
+    on:
+      condition: (touching-ground)
+      action: (state crouch)

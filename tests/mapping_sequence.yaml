@@ -1,0 +1,32 @@
+include: ["main", "not main", "other stuff"]
+inherits: ["fortune", "classes"]
+inventory:
+  - id: dirt
+    qty: 99
+  - id: cake
+    qty: 12
+  - id: book
+    qty: 1
+    contents: "Bla bla bla bla bla"
+  - id: scroll
+    type: fly
+    energy: 30
+  - id: pickaxe
+    type: cast steel
+    energy: 500
+  - id: shovel
+    type: wood
+    energy: 60
+waypoints:
+  - name: "Why is this a list and not a mapping?"
+    coordinates: 10 321 41
+    num_visits: 31
+  - name: "Yet another waypoint"
+    coordinates: -12 -32 1243
+    num_visits: 123
+  - name: "Cool cave"
+    coordinates: -123 -1230 1243
+    num_visits: 10
+  - name: "Flower field"
+    coordinates: -123 123 1243
+    num_visits: 20

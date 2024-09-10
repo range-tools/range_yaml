@@ -1,0 +1,53 @@
+foo: bar
+true: false
+yes: no
+maybe: so
+testing cats:
+  first cat:
+    purrs: ok
+    eats: ok
+    drinks: ok
+    playful: ok
+  second cat:
+    purrs: ok
+    eats: ok
+    drinks: ok
+    playful: no
+      third cat:
+    purrs: no
+    eats: ok
+    drinks: ok
+    playful: no
+  fourth cat:
+    purrs: no
+    eats: ok
+    drinks: ok
+    playful: ok
+bar:
+  bar_one: 1 2 3
+  bar_two: hello world
+  bar_one: the earth is round
+mobs:
+  cow:
+    name: Bob
+    attack power: 50
+    sound: moo
+  cat:
+    name: Ann
+    attack power: 30
+    sound: meow
+on: test on
+we:
+  stay level for a bit: ok
+  need:
+    welcome to another: level
+    to:
+      go:
+        deeper: 1 2 3
+        and wider: foobar
+        and wider: foobar
+        and wider: foobar
+        deepr:
+          and wider: foobar
+          and wider: foobar
+and back to zero: 00 11 22
