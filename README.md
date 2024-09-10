@@ -5,20 +5,20 @@ C++ range for loop interface for yaml files.
 Example usage:
 
 ```c++
-    RangeYaml yaml(yaml_string);
+RangeYaml yaml(your_yaml_string);
     
-    for (const RangeYaml::Node *n : *yaml) {
-    switch (n->type) {
-    case (RangeYaml::SCALAR):
-      std::cout << n->type << "  ";
-      std::cout << n->key << ": " << n->scalar << ' ' << '\n';
-      break;
-    case (RangeYaml::MAPPING):
-      std::cout << n->type << "  ";
-      std::cout << n->key << ":\n";
-      break;
-    }
+for (const RangeYaml::Node *n : yaml) {
+  switch (n->type) {
+  case (RangeYaml::SCALAR):
+    std::cout << n->type << "  ";
+    std::cout << n->key << ": " << n->scalar << ' ' << '\n';
+    break;
+  case (RangeYaml::MAPPING):
+    std::cout << n->type << "  ";
+    std::cout << n->key << ":\n";
+    break;
   }
+}
 ```
 
 See `tests/parse_and_print.cpp` for a full example.
