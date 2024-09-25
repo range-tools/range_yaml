@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.6)
+cmake_minimum_required(VERSION 3.22)
 
 project(range_yaml LANGUAGES C CXX)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++20 -g")
@@ -8,8 +8,7 @@ include(FetchContent)
 FetchContent_Declare(
   yaml
   GIT_REPOSITORY https://github.com/range-tools/libyaml.git
-  GIT_TAG        842037dcee8e9589a073faeb906b6cdf6d8ddb83
-  FIND_PACKAGE_ARGS NAMES yaml
+  GIT_TAG origin/dev
 )
 FetchContent_MakeAvailable(yaml)
 
